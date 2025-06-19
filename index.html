@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trung Nguyen - Software Development Engineer</title>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trung Nguyen - Software Development Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
         * {
             margin: 0;
             padding: 0;
@@ -12,10 +14,15 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
             line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
+            color: #2d3748;
+            background-color: #f7fafc;
+        }
+        
+        /* Force Inter font on all text elements */
+        * {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
         }
         
         .container {
@@ -26,7 +33,7 @@
         
         /* Header */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #718096 0%, #4a5568 100%);
             color: white;
             padding: 80px 0;
             text-align: center;
@@ -96,7 +103,7 @@
         }
         
         .nav-item {
-            color: #333;
+            color: #2d3748;
             text-decoration: none;
             font-weight: 500;
             padding: 10px 20px;
@@ -104,8 +111,8 @@
             transition: all 0.3s ease;
         }
         
-        .nav-item:hover {
-            background: #667eea;
+        .nav-item:hover, .nav-item.active {
+            background: #718096;
             color: white;
         }
         
@@ -119,7 +126,7 @@
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 50px;
-            color: #333;
+            color: #2d3748;
         }
         
         .section-title::after {
@@ -127,7 +134,7 @@
             display: block;
             width: 80px;
             height: 4px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #718096 0%, #4a5568 100%);
             margin: 20px auto;
             border-radius: 2px;
         }
@@ -142,19 +149,20 @@
             background: white;
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(45, 55, 72, 0.1);
             transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
         }
         
         .experience-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 30px rgba(45, 55, 72, 0.15);
         }
         
         .company-logo {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #718096 0%, #4a5568 100%);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -176,29 +184,91 @@
         .experience-title {
             font-size: 1.5rem;
             font-weight: 600;
-            color: #333;
+            color: #2d3748;
             margin-bottom: 5px;
         }
         
         .company-name {
             font-size: 1.2rem;
-            color: #667eea;
+            color: #718096;
             font-weight: 500;
         }
         
         .duration {
-            background: #f8f9fa;
+            background: #edf2f7;
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 0.9rem;
-            color: #666;
+            color: #4a5568;
             white-space: nowrap;
         }
         
         .location {
-            color: #666;
+            color: #718096;
             font-size: 0.95rem;
             margin-top: 5px;
+        }
+        
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(45, 55, 72, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(45, 55, 72, 0.15);
+        }
+        
+        .project-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #718096 0%, #4a5568 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+        
+        .project-description {
+            color: #718096;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .tech-tag {
+            background: #edf2f7;
+            color: #4a5568;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
         }
         
         /* Skills */
@@ -213,20 +283,21 @@
             background: white;
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(45, 55, 72, 0.1);
             text-align: center;
             transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
         }
         
         .skill-category:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 30px rgba(45, 55, 72, 0.15);
         }
         
         .skill-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #718096 0%, #4a5568 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -239,7 +310,7 @@
         .skill-category h3 {
             font-size: 1.3rem;
             margin-bottom: 15px;
-            color: #333;
+            color: #2d3748;
         }
         
         .skill-list {
@@ -251,19 +322,19 @@
         }
         
         .skill-tag {
-            background: #f8f9fa;
+            background: #edf2f7;
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 0.9rem;
-            color: #666;
-            border: 2px solid #e9ecef;
+            color: #4a5568;
+            border: 2px solid #e2e8f0;
             transition: all 0.3s ease;
         }
         
         .skill-tag:hover {
-            background: #667eea;
+            background: #718096;
             color: white;
-            border-color: #667eea;
+            border-color: #718096;
         }
         
         /* About */
@@ -271,16 +342,17 @@
             background: white;
             padding: 50px;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(45, 55, 72, 0.1);
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
+            border: 1px solid #e2e8f0;
         }
         
         .about-content p {
             font-size: 1.1rem;
             line-height: 1.8;
-            color: #666;
+            color: #718096;
             margin-bottom: 20px;
         }
         
@@ -299,26 +371,64 @@
             display: block;
             font-size: 2.5rem;
             font-weight: 700;
-            color: #667eea;
+            color: #718096;
             margin-bottom: 10px;
         }
         
         .stat-label {
-            color: #666;
+            color: #4a5568;
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
         
+        /* ChatBot */
+        .chatbot-content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(45, 55, 72, 0.1);
+            max-width: 1000px;
+            margin: 0 auto;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+        
+        .chatbot-content p {
+            color: #718096;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .chatbot-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(45, 55, 72, 0.1);
+            border: 2px solid #e2e8f0;
+            background: #f7fafc;
+        }
+        
+        .chatbot-container iframe {
+            border-radius: 13px;
+        }
+
         /* Contact */
         .contact-content {
             background: white;
             padding: 50px;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(45, 55, 72, 0.1);
             text-align: center;
             max-width: 600px;
             margin: 0 auto;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .contact-content p {
+            color: #718096;
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
         
         .contact-links {
@@ -333,7 +443,7 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #718096 0%, #4a5568 100%);
             color: white;
             padding: 15px 25px;
             border-radius: 25px;
@@ -344,12 +454,12 @@
         
         .contact-link:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 5px 15px rgba(113, 128, 150, 0.4);
         }
         
         /* Footer */
         footer {
-            background: #333;
+            background: #2d3748;
             color: white;
             text-align: center;
             padding: 30px 0;
@@ -380,7 +490,7 @@
                 gap: 10px;
             }
             
-            .experience-item {
+            .experience-item, .project-item {
                 padding: 25px;
             }
             
@@ -390,6 +500,18 @@
             
             .section-title {
                 font-size: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .chatbot-container {
+                margin: 20px 0;
+            }
+            
+            .chatbot-container iframe {
+                height: 500px;
             }
         }
         
@@ -413,189 +535,249 @@
         html {
             scroll-behavior: smooth;
         }
-    </style>
+    
+#chat-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #718096 0%, #4a5568 100%);
+    color: white;
+    font-size: 24px;
+    padding: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 999;
+    transition: transform 0.2s;
+}
+#chat-icon:hover {
+    transform: scale(1.1);
+}
+</style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content fade-in">
-                <h1>Trung Nguyen</h1>
-                <p>Software Development Engineer</p>
-                <div class="location">Bothell, Washington, United States</div>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span>📧</span>
-                        <a href="mailto:kaelel.17@gmail.com">kaelel.17@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <span>💼</span>
-                        <a href="https://www.linkedin.com/in/trung206" target="_blank">LinkedIn</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    
-    <nav>
-        <div class="container">
-            <div class="nav-content">
-                <a href="#about" class="nav-item">About</a>
-                <a href="#experience" class="nav-item">Experience</a>
-                <a href="#skills" class="nav-item">Skills</a>
-                <a href="#contact" class="nav-item">Contact</a>
-            </div>
-        </div>
-    </nav>
-    
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content fade-in">
-                <p>Experienced Software Development Engineer with over 20 years of expertise in software development, testing, and automation. Currently working at Expedia Group, where I focus on building scalable solutions and implementing robust testing frameworks.</p>
-                <p>My career spans across industry-leading companies including Microsoft and Expedia Group, where I've contributed to critical systems and helped drive engineering excellence through comprehensive testing strategies and software development best practices.</p>
-                <div class="stats">
-                    <div class="stat-item">
-                        <span class="stat-number">20+</span>
-                        <span class="stat-label">Years Experience</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">2</span>
-                        <span class="stat-label">Fortune 500 Companies</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">9+</span>
-                        <span class="stat-label">Years at Expedia</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="experience-grid">
-                <div class="experience-item fade-in">
-                    <div class="company-logo">E</div>
-                    <div class="experience-header">
-                        <div>
-                            <div class="experience-title">Software Development Engineer</div>
-                            <div class="company-name">Expedia Group</div>
-                            <div class="location">Seattle, Washington, United States</div>
-                        </div>
-                        <div class="duration">January 2019 - Present (6+ years)</div>
-                    </div>
-                    <p>Leading software development initiatives and building scalable solutions for one of the world's largest travel platforms. Focus on system architecture, code quality, and engineering best practices.</p>
-                </div>
-                
-                <div class="experience-item fade-in">
-                    <div class="company-logo">E</div>
-                    <div class="experience-header">
-                        <div>
-                            <div class="experience-title">Software Engineer in Test 2</div>
-                            <div class="company-name">Expedia Group</div>
-                            <div class="location">Bellevue, Washington</div>
-                        </div>
-                        <div class="duration">March 2016 - January 2019 (3 years)</div>
-                    </div>
-                    <p>Designed and implemented comprehensive testing frameworks and automation strategies. Collaborated with development teams to ensure high-quality software delivery and maintained critical testing infrastructure.</p>
-                </div>
-                
-                <div class="experience-item fade-in">
-                    <div class="company-logo">M</div>
-                    <div class="experience-header">
-                        <div>
-                            <div class="experience-title">Software Development Engineer in Test</div>
-                            <div class="company-name">Microsoft</div>
-                            <div class="location">Redmond, Washington</div>
-                        </div>
-                        <div class="duration">January 2008 - September 2014 (6+ years)</div>
-                    </div>
-                    <p>Developed and maintained automated testing solutions for Microsoft products. Worked on large-scale testing initiatives and contributed to the development of testing tools and frameworks used across multiple product teams.</p>
-                </div>
-                
-                <div class="experience-item fade-in">
-                    <div class="company-logo">M</div>
-                    <div class="experience-header">
-                        <div>
-                            <div class="experience-title">Software Test Engineer</div>
-                            <div class="company-name">Microsoft</div>
-                            <div class="location">Redmond, Washington</div>
-                        </div>
-                        <div class="duration">January 2003 - December 2007 (5 years)</div>
-                    </div>
-                    <p>Executed comprehensive testing procedures for Microsoft software products. Focused on quality assurance, bug detection and resolution, and ensuring product reliability before release.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-category fade-in">
-                    <div class="skill-icon">🧪</div>
-                    <h3>Testing & QA</h3>
-                    <ul class="skill-list">
-                        <li class="skill-tag">Test Automation</li>
-                        <li class="skill-tag">Manual Testing</li>
-                        <li class="skill-tag">Performance Testing</li>
-                        <li class="skill-tag">Regression Testing</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category fade-in">
-                    <div class="skill-icon">💻</div>
-                    <h3>Software Development</h3>
-                    <ul class="skill-list">
-                        <li class="skill-tag">Full Stack Development</li>
-                        <li class="skill-tag">System Architecture</li>
-                        <li class="skill-tag">Code Review</li>
-                        <li class="skill-tag">Agile Methodologies</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category fade-in">
-                    <div class="skill-icon">🔧</div>
-                    <h3>Technical Leadership</h3>
-                    <ul class="skill-list">
-                        <li class="skill-tag">Team Mentoring</li>
-                        <li class="skill-tag">Technical Design</li>
-                        <li class="skill-tag">Process Improvement</li>
-                        <li class="skill-tag">Quality Standards</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content fade-in">
-                <p>I'm always interested in discussing new opportunities, collaborating on interesting projects, or simply connecting with fellow engineers. Feel free to reach out!</p>
-                <div class="contact-links">
-                    <a href="mailto:kaelel.17@gmail.com" class="contact-link">
-                        <span>📧</span>
+<header>
+<div class="container">
+<div class="header-content fade-in">
+<h1>Trung Nguyen</h1>
+<p>Software Development Engineer</p>
+<div class="location">Bothell, Washington, United States</div>
+<div class="contact-info">
+<div class="contact-item">
+<span>📧</span>
+<a href="mailto:tnn.sea@gmail.com">tnn.sea@gmail.com</a>
+</div>
+<div class="contact-item">
+<span>💼</span>
+<a href="https://www.linkedin.com/in/trung206" target="_blank">LinkedIn</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+<nav>
+<div class="container">
+<div class="nav-content">
+<a class="nav-item" href="#about">About</a>
+<a class="nav-item" href="#experience">Experience</a>
+<a class="nav-item" href="#projects">Projects</a>
+<a class="nav-item" href="#skills">Skills</a>
+
+<a class="nav-item" href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+<section id="about">
+<div class="container">
+<h2 class="section-title">About Me</h2>
+<div class="about-content fade-in">
+<p>Experienced Software Development Engineer with over 20 years of expertise in software development, testing, and automation. Currently working at Expedia Group, where I focus on building scalable solutions and implementing robust testing frameworks.</p>
+<p>My career spans across industry-leading companies including Microsoft and Expedia Group, where I've contributed to critical systems and helped drive engineering excellence through comprehensive testing strategies and software development best practices.</p>
+<div class="stats">
+<div class="stat-item">
+<span class="stat-number">20+</span>
+<span class="stat-label">Years Experience</span>
+</div>
+<div class="stat-item">
+<span class="stat-number">2</span>
+<span class="stat-label">Fortune 500 Companies</span>
+</div>
+<div class="stat-item">
+<span class="stat-number">9+</span>
+<span class="stat-label">Years at Expedia</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="experience">
+<div class="container">
+<h2 class="section-title">Professional Experience</h2>
+<div class="experience-grid">
+<div class="experience-item fade-in">
+<div class="company-logo">E</div>
+<div class="experience-header">
+<div>
+<div class="experience-title">Software Development Engineer</div>
+<div class="company-name">Expedia Group</div>
+<div class="location">Seattle, Washington, United States</div>
+</div>
+<div class="duration">January 2019 - Present (6+ years)</div>
+</div>
+<p>Leading software development initiatives and building scalable solutions for one of the world's largest travel platforms. Focus on system architecture, code quality, and engineering best practices.</p>
+</div>
+<div class="experience-item fade-in">
+<div class="company-logo">E</div>
+<div class="experience-header">
+<div>
+<div class="experience-title">Software Engineer in Test 2</div>
+<div class="company-name">Expedia Group</div>
+<div class="location">Bellevue, Washington</div>
+</div>
+<div class="duration">March 2016 - January 2019 (3 years)</div>
+</div>
+<p>Designed and implemented comprehensive testing frameworks and automation strategies. Collaborated with development teams to ensure high-quality software delivery and maintained critical testing infrastructure.</p>
+</div>
+<div class="experience-item fade-in">
+<div class="company-logo">M</div>
+<div class="experience-header">
+<div>
+<div class="experience-title">Software Development Engineer in Test</div>
+<div class="company-name">Microsoft</div>
+<div class="location">Redmond, Washington</div>
+</div>
+<div class="duration">January 2008 - September 2014 (6+ years)</div>
+</div>
+<p>Developed and maintained automated testing solutions for Microsoft products. Worked on large-scale testing initiatives and contributed to the development of testing tools and frameworks used across multiple product teams.</p>
+</div>
+<div class="experience-item fade-in">
+<div class="company-logo">M</div>
+<div class="experience-header">
+<div>
+<div class="experience-title">Software Test Engineer</div>
+<div class="company-name">Microsoft</div>
+<div class="location">Redmond, Washington</div>
+</div>
+<div class="duration">January 2003 - December 2007 (5 years)</div>
+</div>
+<p>Executed comprehensive testing procedures for Microsoft software products. Focused on quality assurance, bug detection and resolution, and ensuring product reliability before release.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="projects">
+<div class="container">
+<h2 class="section-title">Featured Projects</h2>
+<div class="projects-grid">
+<div class="project-item fade-in">
+<div class="project-icon">🚀</div>
+<div class="project-title">Travel Platform Optimization</div>
+<div class="project-description">Led the development of a high-performance booking system that improved search response times by 40% and handled 10M+ daily requests across Expedia's global platform.</div>
+<div class="project-tech">
+<span class="tech-tag">Java</span>
+<span class="tech-tag">Spring Boot</span>
+<span class="tech-tag">Microservices</span>
+<span class="tech-tag">AWS</span>
+</div>
+</div>
+<div class="project-item fade-in">
+<div class="project-icon">🧪</div>
+<div class="project-title">Automated Testing Framework</div>
+<div class="project-description">Designed and implemented a comprehensive test automation framework that reduced manual testing time by 70% and improved deployment confidence across multiple product teams.</div>
+<div class="project-tech">
+<span class="tech-tag">Selenium</span>
+<span class="tech-tag">TestNG</span>
+<span class="tech-tag">CI/CD</span>
+<span class="tech-tag">Docker</span>
+</div>
+</div>
+<div class="project-item fade-in">
+<div class="project-icon">📊</div>
+<div class="project-title">Performance Monitoring System</div>
+<div class="project-description">Built a real-time monitoring and alerting system that tracks application performance metrics, reducing incident response time by 60% and improving system reliability.</div>
+<div class="project-tech">
+<span class="tech-tag">Grafana</span>
+<span class="tech-tag">Prometheus</span>
+<span class="tech-tag">Kafka</span>
+<span class="tech-tag">Python</span>
+</div>
+</div>
+<div class="project-item fade-in">
+<div class="project-icon">🔧</div>
+<div class="project-title">DevOps Pipeline Enhancement</div>
+<div class="project-description">Modernized CI/CD pipelines and deployment processes, reducing deployment time from hours to minutes while maintaining zero-downtime deployments for critical services.</div>
+<div class="project-tech">
+<span class="tech-tag">Jenkins</span>
+<span class="tech-tag">Kubernetes</span>
+<span class="tech-tag">Terraform</span>
+<span class="tech-tag">GitLab</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="skills">
+<div class="container">
+<h2 class="section-title">Skills &amp; Expertise</h2>
+<div class="skills-grid">
+<div class="skill-category fade-in">
+<div class="skill-icon">🧪</div>
+<h3>Testing &amp; QA</h3>
+<ul class="skill-list">
+<li class="skill-tag">Test Automation</li>
+<li class="skill-tag">Manual Testing</li>
+<li class="skill-tag">Performance Testing</li>
+<li class="skill-tag">Regression Testing</li>
+</ul>
+</div>
+<div class="skill-category fade-in">
+<div class="skill-icon">💻</div>
+<h3>Software Development</h3>
+<ul class="skill-list">
+<li class="skill-tag">Full Stack Development</li>
+<li class="skill-tag">System Architecture</li>
+<li class="skill-tag">Code Review</li>
+<li class="skill-tag">Agile Methodologies</li>
+</ul>
+</div>
+<div class="skill-category fade-in">
+<div class="skill-icon">🔧</div>
+<h3>Technical Leadership</h3>
+<ul class="skill-list">
+<li class="skill-tag">Team Mentoring</li>
+<li class="skill-tag">Technical Design</li>
+<li class="skill-tag">Process Improvement</li>
+<li class="skill-tag">Quality Standards</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<h2 class="section-title">Get In Touch</h2>
+<div class="contact-content fade-in">
+<p>I'm always interested in discussing new opportunities, collaborating on interesting projects, or simply connecting with fellow engineers. Feel free to reach out!</p>
+<div class="contact-links">
+<a class="contact-link" href="mailto:tnn.sea@gmail.com">
+<span>📧</span>
                         Email Me
                     </a>
-                    <a href="https://www.linkedin.com/in/trung206" target="_blank" class="contact-link">
-                        <span>💼</span>
+<a class="contact-link" href="https://www.linkedin.com/in/trung206" target="_blank">
+<span>💼</span>
                         LinkedIn
                     </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Trung Nguyen. All rights reserved.</p>
-        </div>
-    </footer>
-    
-    <script>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<div class="container">
+<p>© 2025 Trung Nguyen. All rights reserved.</p>
+</div>
+</footer>
+<script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -651,5 +833,19 @@
             });
         });
     </script>
-</body>
+<div id="chat-icon" title="Chat with Suji 🤖">💬</div><script>
+document.getElementById("chat-icon").addEventListener("click", () => {
+    const chatUrl = "https://trung-nguyen-all-about-suji.hf.space?__theme=light";
+    const popupWidth = 300;
+    const popupHeight = 400;
+    const left = window.screenX + window.outerWidth - popupWidth - 20;
+    const top = window.screenY + window.outerHeight - popupHeight - 60;
+
+    window.open(
+        chatUrl,
+        "ChatBotPopup",
+        `width=${popupWidth},height=${popupHeight},top=${top},left=${left},resizable=yes`
+    );
+});
+</script></body>
 </html>
